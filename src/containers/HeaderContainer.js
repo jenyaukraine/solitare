@@ -4,7 +4,6 @@ import {Header} from 'components'
 import {Win} from 'components/Popup'
 import * as actions from 'modules'
 import dateFormat from 'dateformat'
-import * as firebase from 'firebase'
 
 class HeaderContainer extends Component {
   constructor() {
@@ -51,23 +50,8 @@ class HeaderContainer extends Component {
   }
 
   insertRecord() {
-    const database = firebase.database()
-    const {name, elapsed} = this.state
-    const {score, move, difficulty, pushRecords} = this.props
 
-    this.setState({ popup: false })
-    database.ref().push().set({
-      name,
-      score,
-      move,
-      difficulty,
-      elapsed,
-      date: Date.now()
-    })
 
-    firebase.database().ref('/').once('value').then(res => {
-      pushRecords(res.val())
-    })
   }
 
   render() {

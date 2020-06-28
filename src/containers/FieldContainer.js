@@ -9,7 +9,7 @@ class FieldContainer extends Component {
   componentDidMount() {
     const {getCard, toggleEntering} = this.props
     getCard(6)
-    setTimeout(() => toggleEntering(), 5300)
+    toggleEntering()
   }
 
   render() {

@@ -12,9 +12,6 @@ const Records = ({score, move, time, handleChange, insertRecord}) => {
       <div className="inner" style={{width: 300}}>
         <div className="win">
           <p>Congratulations!</p>
-          <p>Enter your name</p>
-          <input type="text" onChange={handleChange}/>
-          <button onClick={insertRecord}>OK</button>
         </div>
       </div>
     </div>

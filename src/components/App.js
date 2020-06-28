@@ -1,5 +1,5 @@
 import React from 'react'
-import {HeaderContainer, StockContainer, SetsContainer, FieldContainer, FooterContainer} from 'containers'
+import {HeaderContainer, StockContainer, SetsContainer, FieldContainer, FooterContainer} from 'containers';
 import 'styles/App.sass'
 
 const App = () => {

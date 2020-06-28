@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import * as actions from 'modules'
 import {Footer} from 'components'
 import {New, Records} from 'components/Popup'
-import * as firebase from 'firebase'
 
 class FooterContainer extends Component {
   constructor() {
@@ -15,9 +14,9 @@ class FooterContainer extends Component {
   }
 
   componentDidMount() {
-    firebase.database().ref('/').once('value').then(res => {
-      this.props.pushRecords(res.val())
-    })
+    // firebase.database().ref('/').once('value').then(res => {
+    //   this.props.pushRecords(res.val())
+    // })
   }
 
   showNew() {

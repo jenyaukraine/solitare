@@ -15,9 +15,7 @@ const New = ({setDifficuly, hidePopup, initState, fillStock, getCard, toggleEnte
   const difficulty = suit => {
     select(suit).then(() => {
       getCard(6)
-      setTimeout(() => {
-        toggleEntering()
-      }, 5300)
+      toggleEntering()
     })
   }
 
